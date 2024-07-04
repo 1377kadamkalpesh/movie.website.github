@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbar-container{
+display: flex;
+align-items: center;
+color: white;
+padding: 0 50px;
+height: 100%;
+
+}
+
+.logo-container{
+    flex: 1;
+
+}
+.logo {
+    font-size: 30PX;
+    color: #4dbf00;
+    font-family: "Roboto", sans-serif;
+  
+
+}
+.menu-container{
+    flex: 6;
+    
+}
+.menu-list{
+    display: flex;
+    list-style-type: none;   
+
+}
+.menu-list-item{
+    gap: 10px;
+    margin: 30px;
+}
+.menu-list-item .active{
+    font-weight: bold;
+}
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 20px;
+}
+.tiger{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.toggle{
+    height:20px ;
+    width:40px ;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.toggle-icon{
+    color:rgb(171, 142, 70);
+}
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color:black ;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+
+}
+.sitebar{
+    height: 100vh;
+    width: 50px;
+    background-color: black;
+position: fixed;
+top: 0;
+display: flex;
+    flex-direction: column  ;
+    padding-top: 60px;
+    align-items: center;
+    
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.container{
+    min-height:calc(100vh - 50px) ;
+color: white;
+    background-color: #151515;
+}
+.content-container
+{
+    margin-left: 50px;
+}
+
+.featured-content{
+    height: 50vh;
+    background-color: tomato;
+    padding: 10px;
+}
+
+.featured-title{
+    height: 200px;
+    width: 300px;
+    background: linear-gradient(to bottom,rgba(0,0,0,0),#151515)    
+}
+.featured-desc{
+    color: gray;
+    width: 300px;
+    margin:10px 0;
+}
+.featured-button{
+    background-color: #4dbf00;
+color: white;
+padding: 10px 10px;
+border-radius: 20px;
+border: none;
+outline: none;
+font-weight: bold;
+cursor: pointer;
+}
+.movie-list-container{
+ margin-top:20px;
+
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.movie-list{
+    display: flex;
+    height: 300px;
+    align-items: center ;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+}
+.movie-list-item{
+    margin-right: 30px;
+    transition: all 1s ease-in-out;
+    position: relative;
+}
+
+.movie-list-item :hover.movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item :hover .movie-list-item-desc,
+.movie-list-item :hover .movie-list-item-butoon{
+    opacity: 0.5;
+}
+
+.movie-list-item-img{
+    width: 300px;
+    height: 300px;
+}
+.movie-list-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  
+}
+
+.movie-list-item-butoon{
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius:10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    bottom: 25px;
+    left: 50px;
+    
+}
+.arrow{
+font-size: 120px;
+position: absolute;
+top: 50px;
+right: 0;
+color: rgb(217, 25, 25);
+opacity : 0.6;
+}
+
+.movie-list-item-butoon-new{
+    color: rgba(18, 21, 23, 0.941);
+    background-color: rgb(175, 220, 52);
+    border-radius: 5px;
+    width: 25%;}
+
+    .container.active{
+        background-color:white;
+    }
+    .movie-title.active{
+        color: black;
+    }
+    .navbar-container.active{
+        background-color: white;
+        color: black;
+    }
+.sitebar.active{
+    background-color: white;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+
+}
+
+@media only screen and (max-width : 940px){
+    .menu-container{
+        display: none;
+    }
+ 
+    
+    .featured-title{
+        height:80px   ;
+        width: 50%;
+  
+    }
+
+    .featured-desc.featured-button{
+        height: 65px;
+        width: 50%;
+    }
+   
+
+}
